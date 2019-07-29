@@ -12,5 +12,8 @@
 
     <rosparam command="load" file="$(find m2wr_robot)/config/diff_drive_controller.yaml" ns="/m2wr" />
     <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/m2wr"
-      args="diff_drive_controller" />
+      args="diff_drive_controller">
+      <remap from="/m2wr/diff_drive_controller/cmd_vel" to="/cmd_vel"/>
+      <remap from="/m2wr/diff_drive_controller/odom" to="/odom"/>
+    </node>
 </launch>
