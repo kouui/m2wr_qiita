@@ -36,62 +36,63 @@
                 <box size="0.24 0.178 0.06" />
             </geometry>
         </collision>
+
+        <visual>
+            <origin xyz="0.08 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.04" />
+            </geometry>
+            <material name="gray" />
+        </visual>
+        <collision>
+            <origin xyz="0.08 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.04" />
+            </geometry>
+            <surface>
+                <friction>
+                    <!-- frictionless between these two surface -->
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <material name="gray" />
+        </collision>
+
+        <visual>
+            <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.04" />
+            </geometry>
+            <material name="gray" />
+        </visual>
+        <collision>
+            <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.04" />
+            </geometry>
+            <surface>
+                <friction>
+                    <!-- frictionless between these two surface -->
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
+            <material name="gray" />
+        </collision>
+
     </link>
     <gazebo reference="body_link">
         <material>Gazebo/Gray</material>
     </gazebo>
-
-    <visual>
-        <origin xyz="0.08 0 0.04" rpy="0 0 0" />
-        <geometry>
-            <sphere radius="0.04" />
-        </geometry>
-        <material name="gray" />
-    </visual>
-    <collision>
-        <origin xyz="0.08 0 0.04" rpy="0 0 0" />
-        <geometry>
-            <sphere radius="0.04" />
-        </geometry>
-        <surface>
-            <friction>
-                <!-- frictionless between these two surface -->
-                <ode>
-                    <mu>0</mu>
-                    <mu2>0</mu2>
-                    <slip1>1.0</slip1>
-                    <slip2>1.0</slip2>
-                </ode>
-            </friction>
-        </surface>
-        <material name="gray" />
-    </collision>
-
-    <visual>
-        <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
-        <geometry>
-            <sphere radius="0.04" />
-        </geometry>
-        <material name="gray" />
-    </visual>
-    <collision>
-        <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
-        <geometry>
-            <sphere radius="0.04" />
-        </geometry>
-        <surface>
-            <friction>
-                <!-- frictionless between these two surface -->
-                <ode>
-                    <mu>0</mu>
-                    <mu2>0</mu2>
-                    <slip1>1.0</slip1>
-                    <slip2>1.0</slip2>
-                </ode>
-            </friction>
-        </surface>
-        <material name="gray" />
-    </collision>
 
     <!-- front and back caster -->
     <!--<xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.08 0 0.04" r="0.04"/>-->
