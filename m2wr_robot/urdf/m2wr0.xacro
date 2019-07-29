@@ -4,7 +4,7 @@
     <!-- inludes -->
     <xacro:include filename="$(find m2wr_robot)/urdf/car_driver.gazebo" />
     <xacro:include filename="$(find m2wr_robot)/urdf/wheel.xacro" />
-    <!--<xacro:include filename="$(find m2wr_robot)/urdf/caster.xacro" />-->
+    <xacro:include filename="$(find m2wr_robot)/urdf/caster.xacro" />
     <xacro:include filename="$(find m2wr_robot)/urdf/materials.xacro" />
 
     <link name="base_link"/>
