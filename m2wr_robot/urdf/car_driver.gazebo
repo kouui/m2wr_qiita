@@ -10,7 +10,7 @@
             <wheelSeparation>0.2</wheelSeparation>
             <wheelDiameter>0.1</wheelDiameter>
             <torque>0.02</torque>
-            <commandTopic>cmd</commandTopic>        <!-- sucscribe to -->
+            <commandTopic>cmd_vel</commandTopic>        <!-- sucscribe to -->
             <odometryTopic>odom</odometryTopic>     <!-- publish to -->
             <odometryFrame>odom</odometryFrame>
             <robotBaseFrame>base_link</robotBaseFrame>
