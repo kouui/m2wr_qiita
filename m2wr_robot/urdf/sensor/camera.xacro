@@ -8,7 +8,7 @@
             <!-- visual -->
             <visual>
                 <geometry>
-                    <box size="Sxyz"/>
+                    <box size="${Sxyz}"/>
                 </geometry>
             <material name="white"/>
             </visual>
