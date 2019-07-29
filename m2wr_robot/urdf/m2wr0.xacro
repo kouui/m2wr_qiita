@@ -13,7 +13,7 @@
     <joint name="body_joint" type="fixed">
         <parent link="base_link"/>
         <child  link="body_link"/>
-        <origin xyz="-0.07 0 0.07" rpy="0 0 0"/>
+        <origin xyz="0 0 0.07" rpy="0 0 0"/>
     </joint>
     <!-- body : link -->
     <link name="body_link">
@@ -42,8 +42,8 @@
         <material>Gazebo/Gray</material>
     </gazebo>
 
-    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="-0.14 0 0.04" r="0.04"/>
-    <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.14 0 0.04" r="0.04"/>
+    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="0.10 0 0.04" r="0.04"/>
+    <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.10 0 0.04" r="0.04"/>
 
     <!-- front and back caster -->
     <!--<<xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.08 0 0.04" r="0.04"/>-->
