@@ -31,8 +31,8 @@
 
         <gazebo reference="${prefix}_link">
             <material>Gazebo/Gray</material>
-            <mu1 value="0.0" />
-            <mu2 value="0.0" />
+            <mu1 value="0.5" />
+            <mu2 value="0.5" />
         </gazebo>
 
     </xacro:macro>
