@@ -13,7 +13,7 @@ void models_callback(const gazebo_msgs::ModelStates& model_msg)
     last_model_msg = model_msg;
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
     ros::init(argc, argv, "publish_world_to_base");
     ros::NodeHandle nh;
