@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="caster_macro" params="parent prefix xyz r">
+
+        <!-- joint -->
+        <joint name="${prefix}_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child  link="${prefix}_link"/>
+            <origin xyz="${xyz}" rpy="0 0 0"/>
+        </joint>
+
+        <!-- link -->
+        <link name="${prefix}_link">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <sphere radius="${r}" />
+                </geometry>
+                <material name="gray" />
+            </visual>
+            <collision>
+                <!--<origin xyz="0 0 0" rpy="0 0 0" />-->
+                <geometry>
+                    <sphere radius="${r}" />
+                </geometry>
+                <surface>
+                    <friction>
+                        <!-- frictionless between these two surface -->
+                        <ode>
+                            <mu>0</mu>
+                            <mu2>0</mu2>
+                            <slip1>1.0</slip1>
+                            <slip2>1.0</slip2>
+                        </ode>
+                    </friction>
+                </surface>
+                <material name="gray" />
+            </collision>
+        </link>
+
+        <gazebo reference="${prefix}_link">
+            <material>Gazebo/Gray</material>
+        </gazebo>
+
+    </xacro:macro>
+
+</robot>
