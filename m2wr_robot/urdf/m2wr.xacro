@@ -52,9 +52,10 @@
     <xacro:wheel_macro prefix="left_wheel"  parent="base_link" xyz="0  0.1 0.05" r="0.05"/>
     <xacro:wheel_macro prefix="right_wheel" parent="base_link" xyz="0 -0.1 0.05" r="0.05"/>
 
-    <!-- sensor -->
+    <!-- sensor : lidar -->
     <!--<xacro:include filename="$(find m2wr_robot)/urdf/sensor/lidar.gazebo" />-->
     <!--<xacro:lidar_macro prefix="lidar" parent="base_link" xyz="0 0 0.15" r="0.05" l="0.10"/>-->
+    <!-- sensor : camera -->
     <xacro:include filename="$(find m2wr_robot)/urdf/sensor/camera.gazebo" />
     <xacro:camera_macro prefix="camera" parent="base_link" xyz="0.11 0 0.16" Sxyz="0.02 0.06 0.04"/>
 
