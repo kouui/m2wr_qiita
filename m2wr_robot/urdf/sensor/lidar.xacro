@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:macro name="lidar_macro" params="parent prefix xyz r l model">
+    <xacro:macro name="lidar_macro" params="parent prefix xyz r l">
 
         <joint name="${prefix}_joint" type="fixed">
             <parent link="${parent}"/>
@@ -52,7 +52,7 @@
                     </noise>
                 </ray>
                 <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-                    <topicName value="${model}/laser/scan" />
+                    <topicName>m2wr/laser/scan</topicName>
                     <frameName>sensor_laser</frameName>
                 </plugin>
             </sensor>
