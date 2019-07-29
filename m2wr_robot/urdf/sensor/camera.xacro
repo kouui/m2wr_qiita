@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="camera_macro" params="parent prefix xyz Sxyz">
+    <!-- sensor : link -->
+    <link name="%{prefix}_link">
+        <!-- visual -->
+        <visual>
+            <geometry>
+                <box size="Sxyz"/>
+            </geometry>
+        <material name="white"/>
+        </visual>
+        <!-- collsion -->
+        <collision>
+            <geometry>
+                <box size="Sxyz"/>
+            </geometry>
+        </collision>
+    </link>
+    <!-- sensor : joint -->
+    <joint name="${prefix}_joint" type="fixed">
+        <origin xyz="${xyz}" rpy="0 0 0"/>
+        <parent link="${parent}"/>
+        <child link="${prefix}_link"/>
+    </joint>
+
+
+</robot>
