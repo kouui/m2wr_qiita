@@ -32,9 +32,9 @@
             </collision>
         </link>
 
-        <gazebo reference="${prefix}_link">
-          <material>Gazebo/Red</material>
-        </gazebo>
+        <!--<gazebo reference="${prefix}_link">-->
+          <!--<material>Gazebo/Red</material>-->
+        <!--</gazebo>-->
 
     </xacro:macro>
 
