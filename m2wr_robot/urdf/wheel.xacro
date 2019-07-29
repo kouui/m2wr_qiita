@@ -10,7 +10,20 @@
             <parent link="${parent}"/>
             <child  link="${prefix}_link"/>
             <axis xyz="0 0 1" />
+            <limit velocity="12.0" effort="0.4" />
+            <dynamics damping="0.1"/>
         </joint>
+
+        <!-- transimission -->
+        <transmission name="${prefix}_trans" type="SimpleTransmission">
+            <type>transmission_interface/SimpleTransmission</type>
+            <actuator name="${prefix}_motor">
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+            <joint name="${prefix}_joint">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+        </transmission>
 
         <!-- link -->
         <link name="${prefix}_link">
@@ -33,7 +46,12 @@
         </link>
 
         <gazebo reference="${prefix}_link">
-          <material>Gazebo/Red</material>
+            <material>Gazebo/Red</material>
+            <material>Gazebo/Red</material>
+            <mu1 value="2.5" />
+            <mu2 value="2.5" />
+            <kp value="50000" />
+            <kd value="10" />
         </gazebo>
 
     </xacro:macro>

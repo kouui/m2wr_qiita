@@ -2,7 +2,7 @@
 <robot name="m2wr" xmlns:xacro="http://ros.org/wiki/xacro">
 
     <!-- inludes -->
-    <xacro:include filename="$(find m2wr_robot)/urdf/car_driver.gazebo" />
+    <!--<xacro:include filename="$(find m2wr_robot)/urdf/car_driver.gazebo" />-->
     <xacro:include filename="$(find m2wr_robot)/urdf/wheel.xacro" />
     <xacro:include filename="$(find m2wr_robot)/urdf/caster.xacro" />
     <xacro:include filename="$(find m2wr_robot)/urdf/materials.xacro" />
@@ -50,5 +50,11 @@
     <!-- left and right wheel -->
     <xacro:wheel_macro prefix="left_wheel"  parent="base_link" xyz="0  0.1 0.05" r="0.05"/>
     <xacro:wheel_macro prefix="right_wheel" parent="base_link" xyz="0 -0.1 0.05" r="0.05"/>
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/m2wr</robotNamespace>
+        </plugin>
+    </gazebo>
 
 </robot>
