@@ -4,6 +4,13 @@
 
     <xacro:macro name="caster_macro" params="parent prefix xyz r">
 
+        <!-- joint -->
+        <joint name="${prefix}_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child  link="${prefix}_link"/>
+            <origin xyz="${xyz}" rpy="0 0 0"/>
+        </joint>
+
         <!-- link -->
         <link name="${prefix}_link">
             <visual>
