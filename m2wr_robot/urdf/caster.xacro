@@ -25,23 +25,23 @@
                 <geometry>
                     <sphere radius="${r}" />
                 </geometry>
-                <surface>
-                    <friction>
-                        <!-- frictionless between these two surface -->
-                        <ode>
-                            <mu>0</mu>
-                            <mu2>0</mu2>
-                            <slip1>1.0</slip1>
-                            <slip2>1.0</slip2>
-                        </ode>
-                    </friction>
-                </surface>
                 <material name="gray" />
             </collision>
         </link>
 
         <gazebo reference="${prefix}_link">
             <material>Gazebo/Gray</material>
+            <surface>
+                <friction>
+                    <!-- frictionless between these two surface -->
+                    <ode>
+                        <mu>0</mu>
+                        <mu2>0</mu2>
+                        <slip1>1.0</slip1>
+                        <slip2>1.0</slip2>
+                    </ode>
+                </friction>
+            </surface>
         </gazebo>
 
     </xacro:macro>
