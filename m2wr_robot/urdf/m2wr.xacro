@@ -42,8 +42,8 @@
     </gazebo>
 
     <!-- front and back caster -->
-    <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.08 0 0.03" r="0.04"/>
-    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="-0.08 0 0.03" r="0.04"/>
+    <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.08 0 0.04" r="0.04"/>
+    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="-0.08 0 0.04" r="0.04"/>
     <!-- left and right wheel -->
     <xacro:wheel_macro prefix="left_wheel"  parent="base_link" xyz="0 0.1 0.05"/>
     <xacro:wheel_macro prefix="right_wheel" parent="base_link" xyz="0 -0.1 0.05"/>
