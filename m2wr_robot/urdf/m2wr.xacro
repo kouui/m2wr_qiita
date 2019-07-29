@@ -6,6 +6,7 @@
     <xacro:include filename="$(find m2wr_robot)/urdf/wheel.xacro" />
     <xacro:include filename="$(find m2wr_robot)/urdf/caster.xacro" />
     <xacro:include filename="$(find m2wr_robot)/urdf/materials.xacro" />
+    <xacro:include filename="$(find m2wr_robot)/urdf/sensor/lidar.xacro" />
 
     <link name="base_link"/>
 
@@ -49,5 +50,8 @@
     <!-- left and right wheel -->
     <xacro:wheel_macro prefix="left_wheel"  parent="base_link" xyz="0  0.1 0.05" r="0.05"/>
     <xacro:wheel_macro prefix="right_wheel" parent="base_link" xyz="0 -0.1 0.05" r="0.05"/>
+
+    <!-- sensor -->
+    <xacro:lidar_macro prefix="lidar" parent="base_link" xyz="0 0 0.15" r="0.05", l="0.10"/>
 
 </robot>
