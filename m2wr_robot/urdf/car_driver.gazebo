@@ -17,6 +17,6 @@
             <robotBaseFrame>base_link</robotBaseFrame>
         </plugin>
     </gazebo>
-    <xacro:macro name="car_driver" params="pubTop odomTop">
+    </xacro:macro>
 
 </robot>
