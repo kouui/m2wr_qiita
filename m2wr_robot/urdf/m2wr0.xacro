@@ -42,7 +42,7 @@
         <material>Gazebo/Gray</material>
     </gazebo>
 
-    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="0.10 0 0.04" r="0.04"/>
+    <xacro:caster_macro prefix="back_caster" parent="base_link" xyz="-0.10 0 0.04" r="0.04"/>
     <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.10 0 0.04" r="0.04"/>
 
     <!-- front and back caster -->
