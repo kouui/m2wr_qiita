@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     pnh.getParam("hz", hz);
 
     // subscribe
-    ros::Subscriber joy_sub = nh.subscibe("/gazebo/model_states", 10, models_callback);
+    ros::Subscriber joy_sub = nh.subscribe("/gazebo/model_states", 10, models_callback);
 
     // get and pubish tf
     tf::TransformBroadcaster br;
