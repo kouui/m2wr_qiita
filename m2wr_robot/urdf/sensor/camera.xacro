@@ -4,7 +4,7 @@
     <xacro:macro name="camera_macro" params="parent prefix xyz Sxyz">
 
         <!-- sensor : link -->
-        <link name="%{prefix}_link">
+        <link name="${prefix}_link">
             <!-- visual -->
             <visual>
                 <geometry>
