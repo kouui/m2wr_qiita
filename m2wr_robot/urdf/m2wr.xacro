@@ -37,9 +37,9 @@
             </geometry>
         </collision>
     </link>
-    <!--<gazebo reference="body_link">-->
-        <!--<material>Gazebo/Gray</material>-->
-    <!--</gazebo>-->
+    <gazebo reference="body_link">
+        <material>Gazebo/Gray</material>
+    </gazebo>
 
     <!-- front and back caster -->
     <xacro:caster_macro prefix="front_caster" parent="base_link" xyz="0.08 0 0.04" r="0.04"/>
