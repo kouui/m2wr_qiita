@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+    <xacro:macro name="car_driver_micro" params="pubTopic odomTopic">
     <gazebo>
         <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
             <alwaysOn>true</alwaysOn>
@@ -10,11 +11,12 @@
             <wheelSeparation>0.2</wheelSeparation>
             <wheelDiameter>0.1</wheelDiameter>
             <torque>0.02</torque>
-            <commandTopic>cmd_vel</commandTopic>    <!-- sucscribe to -->
-            <odometryTopic>odom</odometryTopic>     <!-- publish to -->
+            <commandTopic value="${pubTopic}"/>    <!-- sucscribe to -->
+            <odometryTopic value="${odomTopic}"/>     <!-- publish to -->
             <odometryFrame>odom</odometryFrame>
             <robotBaseFrame>base_link</robotBaseFrame>
         </plugin>
     </gazebo>
+    <xacro:macro name="car_driver" params="pubTop odomTop">
 
 </robot>
