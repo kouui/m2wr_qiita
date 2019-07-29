@@ -49,7 +49,5 @@
     <!-- left and right wheel -->
     <xacro:wheel_macro prefix="left_wheel"  parent="base_link" xyz="0  0.1 0.05" r="0.05"/>
     <xacro:wheel_macro prefix="right_wheel" parent="base_link" xyz="0 -0.1 0.05" r="0.05"/>
-    <!-- driver for two wheel car -->
-    <xacro:car_driver_micro pubTopic="/cmd_vel" odomTopic="/odom"/>
 
 </robot>
