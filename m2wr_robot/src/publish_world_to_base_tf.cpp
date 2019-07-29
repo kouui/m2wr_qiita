@@ -8,7 +8,7 @@
 
 gazebo_msgs::ModelStates last_model_msg;
 
-void models_callback(const gazebo::ModelStates& model_msg)
+void models_callback(const gazebo_msgs::ModelStates& model_msg)
 {
     last_model_msg = model_msg;
 }
