@@ -15,7 +15,7 @@
             <!-- collsion -->
             <collision>
                 <geometry>
-                    <box size="Sxyz"/>
+                    <box size="${Sxyz}"/>
                 </geometry>
             </collision>
         </link>
