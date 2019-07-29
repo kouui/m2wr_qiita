@@ -38,14 +38,14 @@
         </collision>
 
         <visual>
-            <origin xyz="0.08 0 0.04" rpy="0 0 0" />
+            <origin xyz="0.08 0 0.03" rpy="0 0 0" />
             <geometry>
                 <sphere radius="0.04" />
             </geometry>
             <material name="gray" />
         </visual>
         <collision>
-            <origin xyz="0.08 0 0.04" rpy="0 0 0" />
+            <origin xyz="0.08 0 0.03" rpy="0 0 0" />
             <geometry>
                 <sphere radius="0.04" />
             </geometry>
@@ -64,14 +64,14 @@
         </collision>
 
         <visual>
-            <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
+            <origin xyz="-0.08 0 0.03" rpy="0 0 0" />
             <geometry>
                 <sphere radius="0.04" />
             </geometry>
             <material name="gray" />
         </visual>
         <collision>
-            <origin xyz="-0.08 0 0.04" rpy="0 0 0" />
+            <origin xyz="-0.08 0 0.03" rpy="0 0 0" />
             <geometry>
                 <sphere radius="0.04" />
             </geometry>
