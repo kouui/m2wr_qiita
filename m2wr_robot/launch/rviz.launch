@@ -2,7 +2,7 @@
 
 <launch>
 
-    <arg name="model" />
+    <arg name="model" default="$(find m2wr_robot)/urdf/m2wr.xacro"/>
     <arg name="gui" default="true" />
     <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
 
