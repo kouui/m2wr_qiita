@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package>
-  <name>my_worlds</name>
+  <name>m2wr_worlds</name>
   <version>0.0.0</version>
-  <description>The my_worlds package</description>
+  <description>The m2wr_worlds package</description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="user@todo.todo">user</maintainer>
